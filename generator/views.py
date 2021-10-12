@@ -12,10 +12,8 @@ def password(request):
     # Initialize password to empty string
     generated_password = ""
 
-    length = int(request.GET.get("length"))
-
     # Get the drop down value, if no value default to 12
-    length = int(request.GET.get("length", 12))
+    length = int(request.GET.get("length", "12"))
 
     # Default lower case characters
     characters = list(ascii_lowercase)
